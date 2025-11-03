@@ -1,0 +1,17 @@
+server:
+  port: 8080 # Bramka będzie działać na porcie 8080
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        # Przykładowa trasa do serwisu autoryzacji (dodamy go później)
+        # Na razie ta trasa nie będzie działać, ale jest gotowa
+        - id: auth-service
+          uri: lb://AUTH-SERVICE # lb:// oznacza "znajdź serwis AUTH-SERVICE w Eurece"
+          predicates:
+            - Path=/api/auth/**
