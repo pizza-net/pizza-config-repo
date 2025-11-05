@@ -1,0 +1,7 @@
+
+eureka:
+  client:
+    register-with-eureka: false # Nie rejestruj samego siebie w Eurece
+    fetch-registry: false # Nie pobieraj rejestru od samego siebie
+  instance:
+    hostname: discovery-server

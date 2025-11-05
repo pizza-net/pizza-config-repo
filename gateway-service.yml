@@ -12,6 +12,6 @@ spring:
         # Przykładowa trasa do serwisu autoryzacji (dodamy go później)
         # Na razie ta trasa nie będzie działać, ale jest gotowa
         - id: auth-service
-          uri: lb://AUTH-SERVICE # lb:// oznacza "znajdź serwis AUTH-SERVICE w Eurece"
+          uri: lb://auth-service # małe litery
           predicates:
             - Path=/api/auth/**
